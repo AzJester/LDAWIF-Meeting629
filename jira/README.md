@@ -59,12 +59,16 @@ If your project renames issue types, override:
 ## Option C — Live push through the Rovo connector (Claude does it)
 
 If the **Atlassian Rovo** connector is granted access to `astrioninnovation.atlassian.net`,
-Claude can create the issues directly in conversation (no token, no CSV). This was blocked at
-authoring time with *"Cloud id … isn't explicitly granted by the user."* To enable it:
+Claude can create the issues directly in conversation (no token, no CSV). To enable it:
 
 1. In Claude: **Settings → Connectors → Atlassian Rovo → Reconnect/Configure**.
-2. On Atlassian's consent screen, **select the `astrioninnovation.atlassian.net` site**.
-3. Tell Claude to populate the board — it reads `backlog.json` and creates the issues.
+2. On Atlassian's consent screen, authorize with the **work account**
+   (shane.turner@astrion.us), **select the `astrioninnovation.atlassian.net` site**, and
+   keep **Write** permission. A personal/gmail Atlassian identity will not see the astrion
+   site — that was the original blocker.
+3. Use a **fresh Claude Code session** (an already-running session won't pick up a
+   newly-authorized connector) and paste the prompt in `CREATE_VIA_ROVO_PROMPT.md`. Claude
+   reads `backlog.json` and creates the issues.
 
 ## Keeping it in sync
 
