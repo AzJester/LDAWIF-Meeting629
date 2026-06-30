@@ -59,6 +59,13 @@
       "owner": "Shane",
       "labels": ["cadence", "logistics"],
       "description": "The mechanics that make the 10-day sprint run: Shane's transition to product full-time, the daily stand-up Shane committed to (Shane/Rob/Dave, no weekend), the seat-data working meeting, the reconvene scheduling around Dave's 7/9 travel, the in-person site visit, and the day-by-day schedule with go/no-go gates."
+    },
+    {
+      "key": "E7",
+      "summary": "Hire AI Lead & Power BI Developer",
+      "owner": "Shane",
+      "labels": ["hiring", "ai-lead", "power-bi"],
+      "description": "Fill the AI Lead & Power BI Developer role. Three interview rounds are complete and the field is down to 2 finalists. Next step is a live working-interview session where each finalist builds a quick AI product in front of the panel, evaluated against a common rubric on a prepared fictitious dataset, leading to a final decision and offer."
     }
   ],
   "tasks": [
@@ -240,6 +247,67 @@
       "labels": ["logistics", "schedule"],
       "summary": "10-Day Sprint Schedule (day-by-day go/no-go gates)",
       "description": "Parent for the day-by-day sub-tasks. Gates: GATE 1 (Day 3) seat number locked or documented assumption; GATE 2 (Day 7) cost model frozen + judicious-cut pass; GATE 3 (Day 8) dry-run passed. Reconvene Day 8/9; execute Day 10."
+    },
+
+    {
+      "key": "H1", "epic": "E7", "owner": "Shane", "status": "Done",
+      "labels": ["hiring", "interviews"],
+      "summary": "Complete first three interview rounds",
+      "description": "Three interview rounds conducted across the candidate pool. Complete."
+    },
+    {
+      "key": "H2", "epic": "E7", "owner": "Shane", "status": "Done",
+      "labels": ["hiring", "shortlist"],
+      "summary": "Shortlist to 2 finalists",
+      "description": "Field narrowed from the interviewed candidates to 2 finalists for the live working-interview round."
+    },
+    {
+      "key": "H3", "epic": "E7", "owner": "Shane", "status": "In Progress",
+      "labels": ["hiring", "exercise-design"],
+      "summary": "Design the live working-interview exercise (build a quick AI product)",
+      "description": "Define the time-boxed live build: scope of the 'quick AI product' the finalist must build in front of the panel, the candidate brief, allowed tools (including Power BI), the expected deliverable, and the time limit. Should exercise both AI build skill and Power BI dashboarding."
+    },
+    {
+      "key": "H4", "epic": "E7", "owner": "Shane", "status": "In Progress",
+      "labels": ["hiring", "fictitious-data"],
+      "summary": "Create the fictitious dataset for the live session",
+      "description": "Build realistic fictitious data for candidates to work against during the live session so no real or sensitive data is exposed. Currently in progress."
+    },
+    {
+      "key": "H5", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "rubric"],
+      "summary": "Define the panel scorecard / evaluation rubric",
+      "description": "Common scoring rubric for the panel: AI product build quality, Power BI dashboarding, data handling, problem-solving under time pressure, communication, and role/culture fit. Weight the criteria and set the score scale so both finalists are judged consistently."
+    },
+    {
+      "key": "H6", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "scheduling"],
+      "summary": "Schedule the live session and confirm the interview panel",
+      "description": "Lock the date/time for each finalist's live session, confirm panel members and availability, and share the rubric plus logistics (environment, screen-share, dataset access) with the panel ahead of time."
+    },
+    {
+      "key": "H7", "epic": "E7", "owner": "Panel",
+      "labels": ["hiring", "live-session"],
+      "summary": "Run the live working-interview with both finalists",
+      "description": "Each finalist builds the quick AI product live in front of the panel against the prepared fictitious dataset within the time box. Panel observes and scores against the rubric."
+    },
+    {
+      "key": "H8", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "debrief"],
+      "summary": "Panel debrief and consolidate scores",
+      "description": "Immediately after the sessions, gather panel scores and notes, consolidate against the rubric, and identify the leading finalist."
+    },
+    {
+      "key": "H9", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "references"],
+      "summary": "Reference checks on the leading finalist",
+      "description": "Conduct reference checks on the preferred finalist before extending an offer."
+    },
+    {
+      "key": "H10", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "offer"],
+      "summary": "Final decision and extend offer",
+      "description": "Make the hire decision and extend the offer for the AI Lead & Power BI Developer role."
     }
   ],
   "subtasks": [
@@ -302,6 +370,37 @@
       "labels": ["day", "execution"],
       "summary": "Day 10 (Thu 7/9): Execute the locked plan; protect Dave's travel; log open decisions",
       "description": "Dave departs (no plan-locking dependency on him); Sully begins standing up the Core cloud instance + seat provisioning; begin forming dedicated SEG mission-app dev teams; start NVIDIA experimentation; advance the site visit; log still-open decisions with owners + dates (plus-up %, 2-vs-3 baselines, stronger data person, Sharon timing, technical definition of Core, HMT acquire-vs-build); confirm raise checkpoints. EXIT: execution started against the locked, funded plan."
+    },
+
+    {
+      "key": "HD1", "parent": "H4", "owner": "Shane", "status": "In Progress",
+      "labels": ["fictitious-data", "design"],
+      "summary": "Design the fictitious business scenario + dataset schema",
+      "description": "Define a believable business scenario and the table/column schema the candidates will analyze and build against."
+    },
+    {
+      "key": "HD2", "parent": "H4", "owner": "Shane",
+      "labels": ["fictitious-data", "generate"],
+      "summary": "Generate the fictitious dataset at realistic volume",
+      "description": "Produce the data (CSV/SQL) with enough rows and realistic distributions to make the build meaningful and Power BI dashboards non-trivial."
+    },
+    {
+      "key": "HD3", "parent": "H4", "owner": "Shane",
+      "labels": ["fictitious-data", "questions"],
+      "summary": "Inject data-quality issues + define the question set",
+      "description": "Add a few realistic data-quality wrinkles (missing values, duplicates, inconsistent formats) and write the business questions / KPIs the candidate's AI product and dashboard should answer."
+    },
+    {
+      "key": "HS1", "parent": "H7", "owner": "Panel",
+      "labels": ["live-session", "finalist-1"],
+      "summary": "Finalist 1 live build session",
+      "description": "Finalist 1 builds the quick AI product live; panel scores against the rubric."
+    },
+    {
+      "key": "HS2", "parent": "H7", "owner": "Panel",
+      "labels": ["live-session", "finalist-2"],
+      "summary": "Finalist 2 live build session",
+      "description": "Finalist 2 builds the quick AI product live; panel scores against the rubric."
     }
   ]
 }

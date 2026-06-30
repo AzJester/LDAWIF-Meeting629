@@ -26,7 +26,7 @@ There are three ways to load it. Pick one.
 3. In the field-mapping step:
    - `Issue Id` → **Issue Id**, `Parent Id` → **Parent** (this builds Epic→Task and
      Task→Sub-task links from the ids in the file).
-   - `Issue Type`, `Summary`, `Description`, `Labels`, `Due Date` → their like-named fields.
+   - `Issue Type`, `Summary`, `Description`, `Labels`, `Status`, `Due Date` → their like-named fields.
    - `Epic Name` → **Epic Name** (epics only).
    - `Owner` → map to **Assignee** if those people exist in your site, otherwise leave it
      unmapped — the owner is already in each label (`owner-…`) and the description.

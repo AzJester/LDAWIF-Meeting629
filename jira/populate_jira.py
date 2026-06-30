@@ -113,6 +113,7 @@ def write_csv(backlog):
             "Description": desc_with_owner(e),
             "Labels": " ".join(labels_for(e, prefix)),
             "Owner": e.get("owner", ""),
+            "Status": e.get("status", ""),
             "Due Date": "",
         })
     for t in backlog["tasks"]:
@@ -125,6 +126,7 @@ def write_csv(backlog):
             "Description": desc_with_owner(t),
             "Labels": " ".join(labels_for(t, prefix)),
             "Owner": t.get("owner", ""),
+            "Status": t.get("status", "To Do"),
             "Due Date": t.get("due", ""),
         })
     for s in backlog["subtasks"]:
@@ -137,11 +139,12 @@ def write_csv(backlog):
             "Description": desc_with_owner(s),
             "Labels": " ".join(labels_for(s, prefix)),
             "Owner": s.get("owner", ""),
+            "Status": s.get("status", "To Do"),
             "Due Date": s.get("due", ""),
         })
 
     cols = ["Issue Id", "Issue Type", "Summary", "Epic Name", "Parent Id",
-            "Description", "Labels", "Owner", "Due Date"]
+            "Description", "Labels", "Owner", "Status", "Due Date"]
     with open(CSV_PATH, "w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=cols)
         writer.writeheader()
