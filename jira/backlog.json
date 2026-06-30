@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "source": "Astrion Defense Mission Growth Meeting (2026-06-29)",
+    "sprintName": "Mission Growth 10-Day Lockdown",
+    "sprintStart": "2026-06-30",
+    "reconvenePrimary": "2026-07-07",
+    "reconveneFallback": "2026-07-08",
+    "executeStart": "2026-07-09",
+    "jira": {
+      "site": "astrioninnovation.atlassian.net",
+      "projectKey": "AIPROG",
+      "boardId": 136
+    },
+    "labelPrefix": "mtg629",
+    "notes": "Hierarchy: Epic -> Task -> Sub-task. Owners are names; map to Jira accountIds in populate_jira.py OWNER_ACCOUNTS. Days reference the 10-day plan; Day 5 (Sat 7/4 Independence Day) and Day 6 (Sun 7/5) are dark.",
+    "ownerDirectory": {
+      "Shane": "712020:dcbf8806-9eb3-4e3a-ae5a-fbbe73cec77d"
+    }
+  },
+  "epics": [
+    {
+      "key": "E1",
+      "summary": "Astrion Core Buildout & Cost Model (GATING)",
+      "owner": "Shane + Sully",
+      "labels": ["core", "cost-model", "gating"],
+      "description": "The CEO's direct 10-day assignment to Shane and Sully: lock down WHAT Astrion Core must be built as across the discussed layers and WHAT it will cost. Core = one common platform (service layer + integration layer + data fabric) providing data/decision orchestration, secure mission-autonomy orchestration, and secure targeted-effects orchestration, with mission applications ('engines'/suites) running on top per AMSGRA/AGRA. Deliverable for the July 7-8 reconvene must include >=2 COAs, a baseline-architecture decision, a dev-seat/licensing cost model with stair-step tiers, and staffing for both Core infra and the separate mission-app dev teams. This is the gating deliverable - the reconvene is won or lost here."
+    },
+    {
+      "key": "E2",
+      "summary": "Strategy, Pursuits & Shaping Lockdown",
+      "owner": "Dave / Jake / Brad (facilitated by Tom)",
+      "labels": ["strategy", "shaping"],
+      "description": "Mission/assault-team leads debate and lock the strategy, actual pursuits, shaping approach, must-wins, and essential capabilities across 12-18mo / 24mo / 3-5yr horizons. Output becomes 'the plan' at the reconvene. Each lead must be able to state exactly what they are accountable to win, shape, and build, with senior capture managers named for must-wins."
+    },
+    {
+      "key": "E3",
+      "summary": "Must-Win Captures (NUS/AFRL, CAMEL)",
+      "owner": "Jake / Brad",
+      "labels": ["captures", "must-win"],
+      "description": "Stand up senior capture leadership for the named company must-wins. NUS/AFRL (~$500M, must show counter + offensive) needs a senior capture manager - 'sponsoring a golf game is not going to win NUS.' CAMEL 1/2/3 re-entry as weapon-systems integrator. These feed the strategy lockdown and the Core resource ask."
+    },
+    {
+      "key": "E4",
+      "summary": "Mission Strategy & Pipeline Deck -> Market Strategy Brief",
+      "owner": "Con / Rob",
+      "labels": ["deck", "brief"],
+      "description": "Adjust the mostly-developed mission strategy & pipeline-review deck to this meeting's discussion and integrate it into the broader market strategy brief, including the lily-pad linkage view (near-term CRADs/creds/prototypes/demos -> 18mo-3yr wins). Called 'definitely doable' in 10 days."
+    },
+    {
+      "key": "E5",
+      "summary": "MVP & Funding Readiness",
+      "owner": "Shane / Eric / Con",
+      "labels": ["mvp", "funding"],
+      "description": "Identify viable MVPs, their cost and staffing so they can be deployed in operations and 'doing meaningful things' by EOY-2026 - the gating condition for the raise. Produce the bootstrap-reality funding view with explicit cut-line choices against Tom's $85M caution; confirm the raise checkpoints (socialize spring 2027, ~$450-500M ~mid-2027)."
+    },
+    {
+      "key": "E6",
+      "summary": "Sprint Cadence, Logistics & 10-Day Schedule",
+      "owner": "Shane",
+      "labels": ["cadence", "logistics"],
+      "description": "The mechanics that make the 10-day sprint run: Shane's transition to product full-time, the daily stand-up Shane committed to (Shane/Rob/Dave, no weekend), the seat-data working meeting, the reconvene scheduling around Dave's 7/9 travel, the in-person site visit, and the day-by-day schedule with go/no-go gates."
+    },
+    {
+      "key": "E7",
+      "summary": "Hire AI Lead & Power BI Developer",
+      "owner": "Shane",
+      "labels": ["hiring", "ai-lead", "power-bi"],
+      "description": "Fill the AI Lead & Power BI Developer role. Three interview rounds are complete and the field is down to 2 finalists. Next step is a live working-interview session where each finalist builds a quick AI product in front of the panel, evaluated against a common rubric on a prepared fictitious dataset, leading to a final decision and offer."
+    }
+  ],
+  "tasks": [
+    {
+      "key": "T-C1", "epic": "E1", "owner": "Sully", "due": "2026-07-01", "day": 2,
+      "labels": ["core", "architecture"], "gating": true,
+      "summary": "Lock the Core layer definition (service/integration/data fabric + 3 orchestration layers)",
+      "description": "Draft and confirm the Core layer definition: service layer + integration layer + data fabric providing data/decision, mission-autonomy, and targeted-effects orchestration, with mission 'engines'/suites running on top per AMSGRA/AGRA. Confirm Tom-validated framing that the orchestration layers bundle into applications that run ON Core."
+    },
+    {
+      "key": "T-C2", "epic": "E1", "owner": "Sully", "due": "2026-07-03", "day": 4,
+      "labels": ["core", "architecture", "decision"], "gating": true,
+      "summary": "Decide Core baseline architecture (cloud vs cloud+on-prem vs 3rd minimum baseline)",
+      "description": "Force the baseline decision. Sully's working assumption: one common Core baseline is probably NOT achievable - plan for a cloud baseline AND a hardware/on-prem baseline, possibly a third minimum-role baseline (Northrop 3-IFC-vs-1 analogy). Document the quality/CM-control burden of multiple baselines. Materially drives cost and staffing - not a quick fork to kill."
+    },
+    {
+      "key": "T-C3", "epic": "E1", "owner": "Shane", "due": "2026-07-02", "day": 2,
+      "labels": ["core", "seats", "dependency"], "gating": true,
+      "summary": "Roll up developer seat counts (Julian/SAG, SET-FL, SET-MD, Pasadena, Flex) + plus-up",
+      "description": "Aggregate developer headcount across Sully's dev (~10), Julian's SAG group, the SET groups (Florida, Maryland), Pasadena, and Flex. Julian has the fix on total SAG developers and should cover down on Sharon's number (exclude Sharon directly - 'negative Nancy'). Apply an agreed plus-up (~20% floated, not committed). FALLBACK: if Julian's number is not back by Day 3, proceed on a DOCUMENTED seat assumption and escalate to Con - do not wait."
+    },
+    {
+      "key": "T-C4", "epic": "E1", "owner": "Rob", "due": "2026-07-03", "day": 4,
+      "labels": ["core", "licensing", "cost-model"], "gating": true,
+      "summary": "Run AWS/Azure license/price models across stair-step seat tiers",
+      "description": "Rob already has AWS + Azure accounts set up. Once seat counts land, run the price models across the stair-step tiers (reconcile 25/50/75/100 and 25/50/100/200; enterprise minimum ~100; Astrion's internal enterprise needs 151 seats). Include premium/subscription cost models and mark the seat threshold where the volume discount kicks in."
+    },
+    {
+      "key": "T-C5", "epic": "E1", "owner": "Shane + Sully", "due": "2026-07-03", "day": 4,
+      "labels": ["core", "coa", "cost-model"], "gating": true,
+      "summary": "Build >=2 Core COAs with phased 3/6/9-month seat projection",
+      "description": "Produce at least two Courses of Action (3 judged 'a little too much to do in this time frame'). For each COA define baseline architecture, staffing, delivery construct, and the phased need projection: what is needed NOW vs perceived at 3/6/9 months, shown as a stair-step gradual increase (SET-FL, SET-MD, Sharon/Pasadena folding in over time). Mark one COA recommended."
+    },
+    {
+      "key": "T-C6", "epic": "E1", "owner": "Shane + Sully", "due": "2026-07-03", "day": 4,
+      "labels": ["core", "staffing", "cost-model"], "gating": true,
+      "summary": "Lock staffing model: Core infra team + dedicated SEG mission-app dev teams",
+      "description": "Core infra team (~3, infrastructure-skilled only) CANNOT build mission applications. Cost separate dedicated mission-app dev teams stood up from SEG - dedicated, NOT matrixed - embedded with Core on the front end to avoid silos/rework/helm-chart misalignment/technical debt. The sprint can only PLAN and COST these teams, not stand them up in 10 days."
+    },
+    {
+      "key": "T-C7", "epic": "E1", "owner": "Shane", "due": "2026-07-06", "day": 7,
+      "labels": ["core", "cost-model", "narrative"], "gating": true,
+      "summary": "Cost-benchmark / value-for-money narrative ($26M-100 vs $49K-3; $54M -> +4)",
+      "description": "Build the value-for-money argument that anchors the ask: Northrop's ~$26M with a 100-man IPT vs Core stood up so far for ~$40-49K by a 3-man team; carry Tom's framing that ~$54M of investment (2x ~$27M) would justify giving Sully 4 people. This benchmark vs ask is the whole ask narrative."
+    },
+    {
+      "key": "T-C8", "epic": "E1", "owner": "Sully", "due": "2026-07-07", "day": 8,
+      "labels": ["core", "hardware"],
+      "summary": "Characterize software-to-hardware delivery construct (LOC, architecture, chips, power)",
+      "description": "Tom explicitly asked: how many lines of code, what's the architecture, how many chips, what's the power supply. Even software ultimately runs on hardware. Define the software-only-suite (runs on customer hardware) vs whole-house (hardware+software package) delivery construct to be priced; rough-order-of-magnitude numbers are enough. DIU/DARPA interest hinges on the deliverable hardware."
+    },
+    {
+      "key": "T-C9", "epic": "E1", "owner": "Shane + Sully", "due": "2026-07-02", "day": 3,
+      "labels": ["core", "edge-ai", "research"],
+      "summary": "Edge-AI hardware research: order NVIDIA chips; Camgen/Edge Runner; Palantir FedRAMP",
+      "description": "Order a couple of NVIDIA chips to experiment so hardware arrives within the window (Tom: 'we ought to be buying a couple of them and playing with them'). Distinguish edge/embedded AI for battlefield processing from commercial LLMs. Note Camgen / Edge Runner partners and Palantir's FedRAMP lock on some DoD paths as a routing constraint (research, not blocking)."
+    },
+    {
+      "key": "T-C10", "epic": "E1", "owner": "Sully", "due": "2026-07-09", "day": 10,
+      "labels": ["core", "execution"],
+      "summary": "Stand up Core production instance in cloud + begin dev-seat provisioning (post-reconvene)",
+      "description": "Execution step after the plan is locked: shift from hardware to standing up a production instance of Core in the cloud to host the dev environment for Astrion developers; begin provisioning the agreed dev seats/licenses against the approved COA."
+    },
+
+    {
+      "key": "T-S1", "epic": "E2", "owner": "Dave", "due": "2026-07-06", "day": 7,
+      "labels": ["strategy", "layered-defense"],
+      "summary": "Lock Layered Defense must-wins / shaping / essentials",
+      "description": "Counter-UAS beyond the IFRCO recompete; global range expansion (Shoals, Eglin, Dugway, Penguin); range data ownership as an essential capability; rapid-integration / mission-assurance positioning. State must-wins, shaping, and essentials across the three horizons."
+    },
+    {
+      "key": "T-S2", "epic": "E2", "owner": "Jake", "due": "2026-07-06", "day": 7,
+      "labels": ["strategy", "autonomous-warfare"],
+      "summary": "Lock Autonomous Warfare strategy (Navy maritime; software-layer prime thesis)",
+      "description": "Protect and expand the Navy autonomous maritime franchise; pursue prime-contract positioning for an autonomous warfare package by owning the software/orchestration layer (not building the drone/ship/sub). Sequence: expand USV position -> integrate USV+UUV -> seabed/underwater warfare. Tie to the common Core foundation."
+    },
+    {
+      "key": "T-S3", "epic": "E2", "owner": "Brad", "due": "2026-07-06", "day": 7,
+      "labels": ["strategy", "integrated-fires"],
+      "summary": "Lock Integrated Fires strategy (Army fire missions, joint fires, CAMEL/MTC)",
+      "description": "Position around Army fire mission applications within the joint fires program; weapon-target pairing, targeted-effects orchestration; Artillery Executive Suite -> NGC2 application opportunity; assess role on CAMEL and MTC and whether the same software/application positioning applies."
+    },
+    {
+      "key": "T-S4", "epic": "E2", "owner": "Dave / Jake / Brad", "due": "2026-07-05", "day": 6,
+      "labels": ["strategy", "dependency", "captures"], "gating": true,
+      "summary": "Define capture managers + BD plans + resource asks -> hand to Shane & Sully",
+      "description": "Mission leads define their capture managers, business-development plans, and resource requirements and TELL Shane and Sully what they need (rather than shopping for support). HARD DEPENDENCY: must land before the Core cost model is frozen on Day 7, because the cost model rolls up their needs. Tom: 'You should be telling Shane and Sully what you need.'"
+    },
+    {
+      "key": "T-S5", "epic": "E2", "owner": "Jake / Eric", "due": "2026-07-06", "day": 7,
+      "labels": ["strategy", "decision", "acquisition"],
+      "summary": "Resolve HMT acquire-vs-build decision (Havoc AI or similar)",
+      "description": "Eric flagged SEG likely lacks human-machine-teaming / autonomy competency in-house and floated acquiring a company with an autonomy platform (e.g., Havoc AI). This directly changes Jake's autonomous-warfare staffing, cost, and timeline - surface it as a flagged decision at the reconvene, not a footnote. Unbudgeted/unscheduled today."
+    },
+    {
+      "key": "T-S6", "epic": "E2", "owner": "Eric (with Shane/Sully)", "due": "2026-07-06", "day": 7,
+      "labels": ["strategy", "go-to-market", "decision"], "gating": true,
+      "summary": "Define the concrete go-to-market offering where services are insufficient",
+      "description": "Eric: 'I still haven't been able to discern what exactly it is that we're seeking to offer just yet.' DIU/DARPA won't buy services. State the Core/MVP offering concretely (software suite vs whole-house hardware+software) before the reconvene - arguably the single most important strategic gap. No prior plan assigned an owner to close it."
+    },
+
+    {
+      "key": "T-M1", "epic": "E3", "owner": "Jake", "due": "2026-07-06", "day": 7,
+      "labels": ["captures", "nus", "must-win"],
+      "summary": "NUS/AFRL: name a senior capture manager; track Schumer program-protection",
+      "description": "Company must-win (~$500M; must show counter + offensive). Identify at a very senior level who is actually the capture manager who can win it - Jake's fingerprints on the capture. Current CM works hard but has never been in this competitive battle. Dependency: Senator Schumer keeping the program open/protected."
+    },
+    {
+      "key": "T-M2", "epic": "E3", "owner": "Brad", "due": "2026-07-06", "day": 7,
+      "labels": ["captures", "camel"],
+      "summary": "CAMEL 1/2/3 re-entry as weapon-systems integrator (GTRI, GDLN, SMD/TF Gold)",
+      "description": "Tom: 'your job is to figure out how to get back in. We just can't let that go.' Pursue weapon-systems-integrator entry; conversations with GTRI (known incumbent) and GDLN Systems; note SMD / TF Gold interest in counter-area and low-cost interceptor work. Coordinate with Jake on the architecture (CAMEL straddles integrated fires + autonomous)."
+    },
+
+    {
+      "key": "T-D1", "epic": "E4", "owner": "Con / Rob", "due": "2026-07-02", "day": 3,
+      "labels": ["deck"],
+      "summary": "Pull and adjust the mission strategy & pipeline-review deck to this discussion",
+      "description": "Pull the mostly-developed deck as the working baseline; list the edits this meeting requires and the integration points into the broader market strategy brief."
+    },
+    {
+      "key": "T-D2", "epic": "E4", "owner": "Con / Rob", "due": "2026-07-07", "day": 8,
+      "labels": ["deck", "brief"],
+      "summary": "Integrate into the market strategy brief + build lily-pad linkage view",
+      "description": "Fold the Core section and the locked strategy into the broader market strategy brief; build the lily-pad linkage view connecting near-term CRADs/creds/prototypes/demos (e.g., FrameWatch for AshSOC) to the 18mo-3yr wins so the strategy doesn't read as a disaggregated list."
+    },
+
+    {
+      "key": "T-F1", "epic": "E5", "owner": "Jake / Shane", "due": "2026-07-06", "day": 7,
+      "labels": ["mvp"],
+      "summary": "Identify viable MVPs, cost, and staffing for EOY-2026 operations",
+      "description": "Tie early wins to the windows: Navy OTA software-integration-on-payloads prototype and Army HMT RPP in the 60-90 day window; dev-team layering onto Core in the 30-45 day window. MVPs must be in operations and 'doing meaningful things' by EOY-2026. Do NOT lean on Muscle Shoals (gated by unpurchased land + certificate of occupancy + data permissions)."
+    },
+    {
+      "key": "T-F2", "epic": "E5", "owner": "Shane / Con", "due": "2026-07-06", "day": 7,
+      "labels": ["funding", "cut-line"], "gating": true,
+      "summary": "Bootstrap-reality funding view + explicit cut-line choices vs the $85M caution",
+      "description": "Map each COA's ask to what bootstrap money can actually fund toward EOY-2026 MVPs vs what requires the raise. Tom flagged $85M as 'hard'; funding is bootstrap money mostly; Berger must adjudicate across all 6 missions. Produce explicit cut-line / priority-of-efforts choices (not one big un-prioritized number) and a recommended COA. 'Cannot be peanut butter.'"
+    },
+    {
+      "key": "T-F3", "epic": "E5", "owner": "Con / Tom", "due": "2026-07-08", "day": 9,
+      "labels": ["funding", "raise"],
+      "summary": "Confirm raise checkpoints on the master schedule",
+      "description": "Socialize the raise spring 2027; raise ~$450-500M ~one year out (mid-2027); EOY-2026 MVPs-in-operations is the gating condition. Confirm these are on the master schedule and tied to the COA decisions."
+    },
+
+    {
+      "key": "T-L1", "epic": "E6", "owner": "Shane", "due": "2026-06-30", "day": 1,
+      "labels": ["logistics", "capacity"],
+      "summary": "Shane transitions off business-unit work to product full-time; hand off to Sean/Joe",
+      "description": "Shane told Con he must transition out of business-unit/business-systems work to focus on product (so far behind on what the team is doing). Hand the business-systems load to Sean and Joe (Crew Flex) where it overlaps. Capacity risk: Shane is co-owning the hardest deliverable AND running the stand-up during the same window."
+    },
+    {
+      "key": "T-L2", "epic": "E6", "owner": "Shane", "due": "2026-06-30", "day": 1,
+      "labels": ["logistics", "cadence"],
+      "summary": "Stand up the daily stand-up cadence (Shane / Rob / Dave; no weekend)",
+      "description": "Shane committed: 'if it's going to be 10 days, we need a daily stand-up.' Fixed 15-30 min slot, recurring on all working days; Rob + Dave standing attendees, Sully on the Core line. NO stand-up Sat 7/4 or Sun 7/5. Each stand-up forces one named decision and produces one artifact."
+    },
+    {
+      "key": "T-L3", "epic": "E6", "owner": "Sully", "due": "2026-07-01", "day": 2,
+      "labels": ["logistics", "seats"],
+      "summary": "Schedule + hold the seat-data working meeting (Sully's team + Julian; exclude Sharon)",
+      "description": "Shane: 'try to put something on the calendar for tomorrow.' Attendees: Sully's boys + Julian + whoever Sully designates. Deliberately exclude Sharon near-term; have Julian cover his number. Also pull in Brian Dylan and Brian Doe (IT); note the data-person gap (want stronger than Muhammad Ali). Output feeds T-C3/T-C4."
+    },
+    {
+      "key": "T-L4", "epic": "E6", "owner": "Dave", "due": "2026-06-30", "day": 1,
+      "labels": ["logistics", "scheduling"],
+      "summary": "Schedule the reconvene for 7/7-7/8 (before Dave's 7/9 travel)",
+      "description": "Dave puts the reconvene on the calendar for 7 or 8 July (Tom: 'Perfect'). Hard constraint: Dave travels starting 7/9, so the reconvene must land 7/7 (primary) or 7/8 (slip), then 'end of next week' only as last resort. Near-zero back-end slack."
+    },
+    {
+      "key": "T-L5", "epic": "E6", "owner": "Con / Rob", "due": "2026-07-07", "day": 8,
+      "labels": ["logistics", "site-visit"],
+      "summary": "Schedule in-person site visit to assess assault-team skill sets",
+      "description": "Con/Rob + Dave + Shane + Brad + Jake in person to assess whether the assault teams have the right skill sets (and the possible HMT competency gap). Give it a concrete proposed date and a confirming owner, scheduled around Dave's 7/9 travel, rather than leaving it as 'near term.'"
+    },
+    {
+      "key": "T-L6", "epic": "E6", "owner": "Shane", "due": "2026-07-09", "day": 10,
+      "labels": ["logistics", "schedule"],
+      "summary": "10-Day Sprint Schedule (day-by-day go/no-go gates)",
+      "description": "Parent for the day-by-day sub-tasks. Gates: GATE 1 (Day 3) seat number locked or documented assumption; GATE 2 (Day 7) cost model frozen + judicious-cut pass; GATE 3 (Day 8) dry-run passed. Reconvene Day 8/9; execute Day 10."
+    },
+
+    {
+      "key": "H1", "epic": "E7", "owner": "Shane", "status": "Done",
+      "labels": ["hiring", "interviews"],
+      "summary": "Complete first three interview rounds",
+      "description": "Three interview rounds conducted across the candidate pool. Complete."
+    },
+    {
+      "key": "H2", "epic": "E7", "owner": "Shane", "status": "Done",
+      "labels": ["hiring", "shortlist"],
+      "summary": "Shortlist to 2 finalists",
+      "description": "Field narrowed from the interviewed candidates to 2 finalists for the live working-interview round."
+    },
+    {
+      "key": "H3", "epic": "E7", "owner": "Shane", "status": "In Progress",
+      "labels": ["hiring", "exercise-design"],
+      "summary": "Design the live working-interview exercise (build a quick AI product)",
+      "description": "Define the time-boxed live build: scope of the 'quick AI product' the finalist must build in front of the panel, the candidate brief, allowed tools (including Power BI), the expected deliverable, and the time limit. Should exercise both AI build skill and Power BI dashboarding."
+    },
+    {
+      "key": "H4", "epic": "E7", "owner": "Shane", "status": "In Progress",
+      "labels": ["hiring", "fictitious-data"],
+      "summary": "Create the fictitious dataset for the live session",
+      "description": "Build realistic fictitious data for candidates to work against during the live session so no real or sensitive data is exposed. Currently in progress."
+    },
+    {
+      "key": "H5", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "rubric"],
+      "summary": "Define the panel scorecard / evaluation rubric",
+      "description": "Common scoring rubric for the panel: AI product build quality, Power BI dashboarding, data handling, problem-solving under time pressure, communication, and role/culture fit. Weight the criteria and set the score scale so both finalists are judged consistently."
+    },
+    {
+      "key": "H6", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "scheduling"],
+      "summary": "Schedule the live session and confirm the interview panel",
+      "description": "Lock the date/time for each finalist's live session, confirm panel members and availability, and share the rubric plus logistics (environment, screen-share, dataset access) with the panel ahead of time."
+    },
+    {
+      "key": "H7", "epic": "E7", "owner": "Panel",
+      "labels": ["hiring", "live-session"],
+      "summary": "Run the live working-interview with both finalists",
+      "description": "Each finalist builds the quick AI product live in front of the panel against the prepared fictitious dataset within the time box. Panel observes and scores against the rubric."
+    },
+    {
+      "key": "H8", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "debrief"],
+      "summary": "Panel debrief and consolidate scores",
+      "description": "Immediately after the sessions, gather panel scores and notes, consolidate against the rubric, and identify the leading finalist."
+    },
+    {
+      "key": "H9", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "references"],
+      "summary": "Reference checks on the leading finalist",
+      "description": "Conduct reference checks on the preferred finalist before extending an offer."
+    },
+    {
+      "key": "H10", "epic": "E7", "owner": "Shane",
+      "labels": ["hiring", "offer"],
+      "summary": "Final decision and extend offer",
+      "description": "Make the hire decision and extend the offer for the AI Lead & Power BI Developer role."
+    }
+  ],
+  "subtasks": [
+    {
+      "key": "D1", "parent": "T-L6", "owner": "Shane", "due": "2026-06-30", "day": 1,
+      "labels": ["day"],
+      "summary": "Day 1 (Tue 6/30): Kickoff - cadence locked, Shane to product, every unknown owned",
+      "description": "Stand-up cadence on calendars (no weekend); Day-2 seat-data meeting booked (Julian in / Sharon out); every cost-model input has a named owner and is pinged; deliverable skeleton drafted; mission leads own the strategy/pursuits/shaping debate; Con/Rob own the deck. EXIT: all of the above true."
+    },
+    {
+      "key": "D2", "parent": "T-L6", "owner": "Shane", "due": "2026-07-01", "day": 2,
+      "labels": ["day", "gate"],
+      "summary": "Day 2 (Wed 7/1): GATE A - extract headcount inputs, frame Core architecture",
+      "description": "Hold seat-data meeting (roll up dev counts, methodology, plus-up parked); Rob confirms price-model harness + tiers; Sully drafts Core layer + baseline question; mission leads open NUS/CAMEL/Layered-Defense work. EXIT: every cost-model input has a named owner + hard deadline; draft Core+baseline definition exists; unowned inputs escalated today (not over the weekend)."
+    },
+    {
+      "key": "D3", "parent": "T-L6", "owner": "Shane", "due": "2026-07-02", "day": 3,
+      "labels": ["day", "gate"],
+      "summary": "Day 3 (Thu 7/2): GATE 1 - seat number locked; deck baseline pulled; NVIDIA ordered",
+      "description": "Julian delivers SAG headcount (or firm time); finalize rolled-up seat number + plus-up (FALLBACK: documented assumption, escalate to Con); lock licensing tiers + enterprise floor; Con/Rob pull deck baseline; order NVIDIA chips; mission leads produce draft must-win lists with NAMED capture managers + first-cut asks. EXIT: GATE 1 GO."
+    },
+    {
+      "key": "D4", "parent": "T-L6", "owner": "Shane", "due": "2026-07-03", "day": 4,
+      "labels": ["day", "gate"],
+      "summary": "Day 4 (Fri 7/3): GATE B/C - kill the architecture fork, build COAs, first cost numbers before the holiday",
+      "description": "Lock baseline decision; build >=2 costed COAs with phased 3/6/9-mo projection; Rob runs price models; lock staffing model (Core infra + SEG mission-app teams); characterize software-to-hardware construct; finalize plus-up. EXIT: baseline LOCKED, two costed COAs drafted, first end-to-end numbers, every externally-owned number in hand (nothing retrievable over the 7/4-7/5 holiday)."
+    },
+    {
+      "key": "D5", "parent": "T-L6", "owner": "Shane", "due": "2026-07-04", "day": 5,
+      "labels": ["day", "dark"],
+      "summary": "Day 5 (Sat 7/4): Independence Day - DARK (async only)",
+      "description": "No stand-up. US Independence Day, treat as non-working. Optional async drop of late data points. Shane posts a short async check-in summarizing what is in hand + the single weekend synthesis task. EXIT: no deliverable; async status posted."
+    },
+    {
+      "key": "D6", "parent": "T-L6", "owner": "Shane", "due": "2026-07-05", "day": 6,
+      "labels": ["day", "dark"],
+      "summary": "Day 6 (Sun 7/5): Weekend solo synthesis (async, no stand-up)",
+      "description": "Shane assembles the Core deliverable draft: final seat number + plus-up into both COAs, Rob's cost figures attached, baseline-decision rationale + staffing/value-for-money narrative. Produce a first full cost figure per COA. Post the draft Sunday evening for Monday review. EXIT: draft Core deliverable with two costed COAs posted."
+    },
+    {
+      "key": "D7", "parent": "T-L6", "owner": "Shane", "due": "2026-07-06", "day": 7,
+      "labels": ["day", "gate"],
+      "summary": "Day 7 (Mon 7/6): GATE 2 - reconverge, freeze the cost model, judicious-cut pass",
+      "description": "Freeze the Core cost model (2 COAs costed, baseline decided, tiers + plus-up locked, single rolled-up figure, discount threshold marked); run the judicious-cut/prioritization pass vs the $85M caution; MVP workstream identifies viable MVPs/cost/staffing for EOY-2026; Con/Rob assemble the integrated deck; mission leads deliver near-final must-wins with named capture managers. EXIT: GATE 2 GO."
+    },
+    {
+      "key": "D8", "parent": "T-L6", "owner": "Shane", "due": "2026-07-07", "day": 8,
+      "labels": ["day", "gate"],
+      "summary": "Day 8 (Tue 7/7): Final assembly + GATE 3 dry-run (primary reconvene window opens)",
+      "description": "Assemble both deliverables (Core buildout + cost model; locked strategy/pursuits/shaping); GATE 3 dry-run to Tom/Eric/Con; pressure-test the ask vs the cut-line; Berger reviews for cross-mission trimming. If dry-run clean, hold the reconvene today; else fix overnight and hold 7/8. EXIT: both deliverables assembled, dry-run passed (or gaps captured), reconvene confirmed for 7/7 or 7/8."
+    },
+    {
+      "key": "D9", "parent": "T-L6", "owner": "Shane", "due": "2026-07-08", "day": 9,
+      "labels": ["day", "milestone"],
+      "summary": "Day 9 (Wed 7/8): RECONVENE - it becomes the plan",
+      "description": "Hold the reconvene before Dave's 7/9 travel. Mission leads present locked strategy with named capture managers; Shane+Sully present Core buildout + costed model with prioritized ask and explicit cut-line choices; Con/Rob present integrated brief; Tom/Berger adjudicate across the 6 missions; confirm MVP-by-EOY tied to the raise. Capture all decisions in writing. EXIT: the plan is locked."
+    },
+    {
+      "key": "D10", "parent": "T-L6", "owner": "Shane", "due": "2026-07-09", "day": 10,
+      "labels": ["day", "execution"],
+      "summary": "Day 10 (Thu 7/9): Execute the locked plan; protect Dave's travel; log open decisions",
+      "description": "Dave departs (no plan-locking dependency on him); Sully begins standing up the Core cloud instance + seat provisioning; begin forming dedicated SEG mission-app dev teams; start NVIDIA experimentation; advance the site visit; log still-open decisions with owners + dates (plus-up %, 2-vs-3 baselines, stronger data person, Sharon timing, technical definition of Core, HMT acquire-vs-build); confirm raise checkpoints. EXIT: execution started against the locked, funded plan."
+    },
+
+    {
+      "key": "HD1", "parent": "H4", "owner": "Shane", "status": "In Progress",
+      "labels": ["fictitious-data", "design"],
+      "summary": "Design the fictitious business scenario + dataset schema",
+      "description": "Define a believable business scenario and the table/column schema the candidates will analyze and build against."
+    },
+    {
+      "key": "HD2", "parent": "H4", "owner": "Shane",
+      "labels": ["fictitious-data", "generate"],
+      "summary": "Generate the fictitious dataset at realistic volume",
+      "description": "Produce the data (CSV/SQL) with enough rows and realistic distributions to make the build meaningful and Power BI dashboards non-trivial."
+    },
+    {
+      "key": "HD3", "parent": "H4", "owner": "Shane",
+      "labels": ["fictitious-data", "questions"],
+      "summary": "Inject data-quality issues + define the question set",
+      "description": "Add a few realistic data-quality wrinkles (missing values, duplicates, inconsistent formats) and write the business questions / KPIs the candidate's AI product and dashboard should answer."
+    },
+    {
+      "key": "HS1", "parent": "H7", "owner": "Panel",
+      "labels": ["live-session", "finalist-1"],
+      "summary": "Finalist 1 live build session",
+      "description": "Finalist 1 builds the quick AI product live; panel scores against the rubric."
+    },
+    {
+      "key": "HS2", "parent": "H7", "owner": "Panel",
+      "labels": ["live-session", "finalist-2"],
+      "summary": "Finalist 2 live build session",
+      "description": "Finalist 2 builds the quick AI product live; panel scores against the rubric."
+    }
+  ]
+}

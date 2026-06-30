@@ -1,0 +1,184 @@
+Issue Id,Issue Type,Summary,Epic Name,Parent Id,Description,Labels,Owner,Status,Due Date
+E1,Epic,Astrion Core Buildout & Cost Model (GATING),Astrion Core Buildout & Cost Model (GATING),,"Owner: Shane + Sully
+
+The CEO's direct 10-day assignment to Shane and Sully: lock down WHAT Astrion Core must be built as across the discussed layers and WHAT it will cost. Core = one common platform (service layer + integration layer + data fabric) providing data/decision orchestration, secure mission-autonomy orchestration, and secure targeted-effects orchestration, with mission applications ('engines'/suites) running on top per AMSGRA/AGRA. Deliverable for the July 7-8 reconvene must include >=2 COAs, a baseline-architecture decision, a dev-seat/licensing cost model with stair-step tiers, and staffing for both Core infra and the separate mission-app dev teams. This is the gating deliverable - the reconvene is won or lost here.",mtg629 core cost-model gating owner-shane-sully,Shane + Sully,,
+E2,Epic,"Strategy, Pursuits & Shaping Lockdown","Strategy, Pursuits & Shaping Lockdown",,"Owner: Dave / Jake / Brad (facilitated by Tom)
+
+Mission/assault-team leads debate and lock the strategy, actual pursuits, shaping approach, must-wins, and essential capabilities across 12-18mo / 24mo / 3-5yr horizons. Output becomes 'the plan' at the reconvene. Each lead must be able to state exactly what they are accountable to win, shape, and build, with senior capture managers named for must-wins.",mtg629 strategy shaping owner-dave-jake-brad-facilitated-by-tom,Dave / Jake / Brad (facilitated by Tom),,
+E3,Epic,"Must-Win Captures (NUS/AFRL, CAMEL)","Must-Win Captures (NUS/AFRL, CAMEL)",,"Owner: Jake / Brad
+
+Stand up senior capture leadership for the named company must-wins. NUS/AFRL (~$500M, must show counter + offensive) needs a senior capture manager - 'sponsoring a golf game is not going to win NUS.' CAMEL 1/2/3 re-entry as weapon-systems integrator. These feed the strategy lockdown and the Core resource ask.",mtg629 captures must-win owner-jake-brad,Jake / Brad,,
+E4,Epic,Mission Strategy & Pipeline Deck -> Market Strategy Brief,Mission Strategy & Pipeline Deck -> Market Strategy Brief,,"Owner: Con / Rob
+
+Adjust the mostly-developed mission strategy & pipeline-review deck to this meeting's discussion and integrate it into the broader market strategy brief, including the lily-pad linkage view (near-term CRADs/creds/prototypes/demos -> 18mo-3yr wins). Called 'definitely doable' in 10 days.",mtg629 deck brief owner-con-rob,Con / Rob,,
+E5,Epic,MVP & Funding Readiness,MVP & Funding Readiness,,"Owner: Shane / Eric / Con
+
+Identify viable MVPs, their cost and staffing so they can be deployed in operations and 'doing meaningful things' by EOY-2026 - the gating condition for the raise. Produce the bootstrap-reality funding view with explicit cut-line choices against Tom's $85M caution; confirm the raise checkpoints (socialize spring 2027, ~$450-500M ~mid-2027).",mtg629 mvp funding owner-shane-eric-con,Shane / Eric / Con,,
+E6,Epic,"Sprint Cadence, Logistics & 10-Day Schedule","Sprint Cadence, Logistics & 10-Day Schedule",,"Owner: Shane
+
+The mechanics that make the 10-day sprint run: Shane's transition to product full-time, the daily stand-up Shane committed to (Shane/Rob/Dave, no weekend), the seat-data working meeting, the reconvene scheduling around Dave's 7/9 travel, the in-person site visit, and the day-by-day schedule with go/no-go gates.",mtg629 cadence logistics owner-shane,Shane,,
+E7,Epic,Hire AI Lead & Power BI Developer,Hire AI Lead & Power BI Developer,,"Owner: Shane
+
+Fill the AI Lead & Power BI Developer role. Three interview rounds are complete and the field is down to 2 finalists. Next step is a live working-interview session where each finalist builds a quick AI product in front of the panel, evaluated against a common rubric on a prepared fictitious dataset, leading to a final decision and offer.",mtg629 hiring ai-lead power-bi owner-shane,Shane,,
+T-C1,Task,Lock the Core layer definition (service/integration/data fabric + 3 orchestration layers),,E1,"Owner: Sully
+
+Draft and confirm the Core layer definition: service layer + integration layer + data fabric providing data/decision, mission-autonomy, and targeted-effects orchestration, with mission 'engines'/suites running on top per AMSGRA/AGRA. Confirm Tom-validated framing that the orchestration layers bundle into applications that run ON Core.",mtg629 core architecture owner-sully gating day-2,Sully,To Do,2026-07-01
+T-C2,Task,Decide Core baseline architecture (cloud vs cloud+on-prem vs 3rd minimum baseline),,E1,"Owner: Sully
+
+Force the baseline decision. Sully's working assumption: one common Core baseline is probably NOT achievable - plan for a cloud baseline AND a hardware/on-prem baseline, possibly a third minimum-role baseline (Northrop 3-IFC-vs-1 analogy). Document the quality/CM-control burden of multiple baselines. Materially drives cost and staffing - not a quick fork to kill.",mtg629 core architecture decision owner-sully gating day-4,Sully,To Do,2026-07-03
+T-C3,Task,"Roll up developer seat counts (Julian/SAG, SET-FL, SET-MD, Pasadena, Flex) + plus-up",,E1,"Owner: Shane
+
+Aggregate developer headcount across Sully's dev (~10), Julian's SAG group, the SET groups (Florida, Maryland), Pasadena, and Flex. Julian has the fix on total SAG developers and should cover down on Sharon's number (exclude Sharon directly - 'negative Nancy'). Apply an agreed plus-up (~20% floated, not committed). FALLBACK: if Julian's number is not back by Day 3, proceed on a DOCUMENTED seat assumption and escalate to Con - do not wait.",mtg629 core seats dependency owner-shane gating day-2,Shane,To Do,2026-07-02
+T-C4,Task,Run AWS/Azure license/price models across stair-step seat tiers,,E1,"Owner: Rob
+
+Rob already has AWS + Azure accounts set up. Once seat counts land, run the price models across the stair-step tiers (reconcile 25/50/75/100 and 25/50/100/200; enterprise minimum ~100; Astrion's internal enterprise needs 151 seats). Include premium/subscription cost models and mark the seat threshold where the volume discount kicks in.",mtg629 core licensing cost-model owner-rob gating day-4,Rob,To Do,2026-07-03
+T-C5,Task,Build >=2 Core COAs with phased 3/6/9-month seat projection,,E1,"Owner: Shane + Sully
+
+Produce at least two Courses of Action (3 judged 'a little too much to do in this time frame'). For each COA define baseline architecture, staffing, delivery construct, and the phased need projection: what is needed NOW vs perceived at 3/6/9 months, shown as a stair-step gradual increase (SET-FL, SET-MD, Sharon/Pasadena folding in over time). Mark one COA recommended.",mtg629 core coa cost-model owner-shane-sully gating day-4,Shane + Sully,To Do,2026-07-03
+T-C6,Task,Lock staffing model: Core infra team + dedicated SEG mission-app dev teams,,E1,"Owner: Shane + Sully
+
+Core infra team (~3, infrastructure-skilled only) CANNOT build mission applications. Cost separate dedicated mission-app dev teams stood up from SEG - dedicated, NOT matrixed - embedded with Core on the front end to avoid silos/rework/helm-chart misalignment/technical debt. The sprint can only PLAN and COST these teams, not stand them up in 10 days.",mtg629 core staffing cost-model owner-shane-sully gating day-4,Shane + Sully,To Do,2026-07-03
+T-C7,Task,Cost-benchmark / value-for-money narrative ($26M-100 vs $49K-3; $54M -> +4),,E1,"Owner: Shane
+
+Build the value-for-money argument that anchors the ask: Northrop's ~$26M with a 100-man IPT vs Core stood up so far for ~$40-49K by a 3-man team; carry Tom's framing that ~$54M of investment (2x ~$27M) would justify giving Sully 4 people. This benchmark vs ask is the whole ask narrative.",mtg629 core cost-model narrative owner-shane gating day-7,Shane,To Do,2026-07-06
+T-C8,Task,"Characterize software-to-hardware delivery construct (LOC, architecture, chips, power)",,E1,"Owner: Sully
+
+Tom explicitly asked: how many lines of code, what's the architecture, how many chips, what's the power supply. Even software ultimately runs on hardware. Define the software-only-suite (runs on customer hardware) vs whole-house (hardware+software package) delivery construct to be priced; rough-order-of-magnitude numbers are enough. DIU/DARPA interest hinges on the deliverable hardware.",mtg629 core hardware owner-sully day-8,Sully,To Do,2026-07-07
+T-C9,Task,Edge-AI hardware research: order NVIDIA chips; Camgen/Edge Runner; Palantir FedRAMP,,E1,"Owner: Shane + Sully
+
+Order a couple of NVIDIA chips to experiment so hardware arrives within the window (Tom: 'we ought to be buying a couple of them and playing with them'). Distinguish edge/embedded AI for battlefield processing from commercial LLMs. Note Camgen / Edge Runner partners and Palantir's FedRAMP lock on some DoD paths as a routing constraint (research, not blocking).",mtg629 core edge-ai research owner-shane-sully day-3,Shane + Sully,To Do,2026-07-02
+T-C10,Task,Stand up Core production instance in cloud + begin dev-seat provisioning (post-reconvene),,E1,"Owner: Sully
+
+Execution step after the plan is locked: shift from hardware to standing up a production instance of Core in the cloud to host the dev environment for Astrion developers; begin provisioning the agreed dev seats/licenses against the approved COA.",mtg629 core execution owner-sully day-10,Sully,To Do,2026-07-09
+T-S1,Task,Lock Layered Defense must-wins / shaping / essentials,,E2,"Owner: Dave
+
+Counter-UAS beyond the IFRCO recompete; global range expansion (Shoals, Eglin, Dugway, Penguin); range data ownership as an essential capability; rapid-integration / mission-assurance positioning. State must-wins, shaping, and essentials across the three horizons.",mtg629 strategy layered-defense owner-dave day-7,Dave,To Do,2026-07-06
+T-S2,Task,Lock Autonomous Warfare strategy (Navy maritime; software-layer prime thesis),,E2,"Owner: Jake
+
+Protect and expand the Navy autonomous maritime franchise; pursue prime-contract positioning for an autonomous warfare package by owning the software/orchestration layer (not building the drone/ship/sub). Sequence: expand USV position -> integrate USV+UUV -> seabed/underwater warfare. Tie to the common Core foundation.",mtg629 strategy autonomous-warfare owner-jake day-7,Jake,To Do,2026-07-06
+T-S3,Task,"Lock Integrated Fires strategy (Army fire missions, joint fires, CAMEL/MTC)",,E2,"Owner: Brad
+
+Position around Army fire mission applications within the joint fires program; weapon-target pairing, targeted-effects orchestration; Artillery Executive Suite -> NGC2 application opportunity; assess role on CAMEL and MTC and whether the same software/application positioning applies.",mtg629 strategy integrated-fires owner-brad day-7,Brad,To Do,2026-07-06
+T-S4,Task,Define capture managers + BD plans + resource asks -> hand to Shane & Sully,,E2,"Owner: Dave / Jake / Brad
+
+Mission leads define their capture managers, business-development plans, and resource requirements and TELL Shane and Sully what they need (rather than shopping for support). HARD DEPENDENCY: must land before the Core cost model is frozen on Day 7, because the cost model rolls up their needs. Tom: 'You should be telling Shane and Sully what you need.'",mtg629 strategy dependency captures owner-dave-jake-brad gating day-6,Dave / Jake / Brad,To Do,2026-07-05
+T-S5,Task,Resolve HMT acquire-vs-build decision (Havoc AI or similar),,E2,"Owner: Jake / Eric
+
+Eric flagged SEG likely lacks human-machine-teaming / autonomy competency in-house and floated acquiring a company with an autonomy platform (e.g., Havoc AI). This directly changes Jake's autonomous-warfare staffing, cost, and timeline - surface it as a flagged decision at the reconvene, not a footnote. Unbudgeted/unscheduled today.",mtg629 strategy decision acquisition owner-jake-eric day-7,Jake / Eric,To Do,2026-07-06
+T-S6,Task,Define the concrete go-to-market offering where services are insufficient,,E2,"Owner: Eric (with Shane/Sully)
+
+Eric: 'I still haven't been able to discern what exactly it is that we're seeking to offer just yet.' DIU/DARPA won't buy services. State the Core/MVP offering concretely (software suite vs whole-house hardware+software) before the reconvene - arguably the single most important strategic gap. No prior plan assigned an owner to close it.",mtg629 strategy go-to-market decision owner-eric-with-shane-sully gating day-7,Eric (with Shane/Sully),To Do,2026-07-06
+T-M1,Task,NUS/AFRL: name a senior capture manager; track Schumer program-protection,,E3,"Owner: Jake
+
+Company must-win (~$500M; must show counter + offensive). Identify at a very senior level who is actually the capture manager who can win it - Jake's fingerprints on the capture. Current CM works hard but has never been in this competitive battle. Dependency: Senator Schumer keeping the program open/protected.",mtg629 captures nus must-win owner-jake day-7,Jake,To Do,2026-07-06
+T-M2,Task,"CAMEL 1/2/3 re-entry as weapon-systems integrator (GTRI, GDLN, SMD/TF Gold)",,E3,"Owner: Brad
+
+Tom: 'your job is to figure out how to get back in. We just can't let that go.' Pursue weapon-systems-integrator entry; conversations with GTRI (known incumbent) and GDLN Systems; note SMD / TF Gold interest in counter-area and low-cost interceptor work. Coordinate with Jake on the architecture (CAMEL straddles integrated fires + autonomous).",mtg629 captures camel owner-brad day-7,Brad,To Do,2026-07-06
+T-D1,Task,Pull and adjust the mission strategy & pipeline-review deck to this discussion,,E4,"Owner: Con / Rob
+
+Pull the mostly-developed deck as the working baseline; list the edits this meeting requires and the integration points into the broader market strategy brief.",mtg629 deck owner-con-rob day-3,Con / Rob,To Do,2026-07-02
+T-D2,Task,Integrate into the market strategy brief + build lily-pad linkage view,,E4,"Owner: Con / Rob
+
+Fold the Core section and the locked strategy into the broader market strategy brief; build the lily-pad linkage view connecting near-term CRADs/creds/prototypes/demos (e.g., FrameWatch for AshSOC) to the 18mo-3yr wins so the strategy doesn't read as a disaggregated list.",mtg629 deck brief owner-con-rob day-8,Con / Rob,To Do,2026-07-07
+T-F1,Task,"Identify viable MVPs, cost, and staffing for EOY-2026 operations",,E5,"Owner: Jake / Shane
+
+Tie early wins to the windows: Navy OTA software-integration-on-payloads prototype and Army HMT RPP in the 60-90 day window; dev-team layering onto Core in the 30-45 day window. MVPs must be in operations and 'doing meaningful things' by EOY-2026. Do NOT lean on Muscle Shoals (gated by unpurchased land + certificate of occupancy + data permissions).",mtg629 mvp owner-jake-shane day-7,Jake / Shane,To Do,2026-07-06
+T-F2,Task,Bootstrap-reality funding view + explicit cut-line choices vs the $85M caution,,E5,"Owner: Shane / Con
+
+Map each COA's ask to what bootstrap money can actually fund toward EOY-2026 MVPs vs what requires the raise. Tom flagged $85M as 'hard'; funding is bootstrap money mostly; Berger must adjudicate across all 6 missions. Produce explicit cut-line / priority-of-efforts choices (not one big un-prioritized number) and a recommended COA. 'Cannot be peanut butter.'",mtg629 funding cut-line owner-shane-con gating day-7,Shane / Con,To Do,2026-07-06
+T-F3,Task,Confirm raise checkpoints on the master schedule,,E5,"Owner: Con / Tom
+
+Socialize the raise spring 2027; raise ~$450-500M ~one year out (mid-2027); EOY-2026 MVPs-in-operations is the gating condition. Confirm these are on the master schedule and tied to the COA decisions.",mtg629 funding raise owner-con-tom day-9,Con / Tom,To Do,2026-07-08
+T-L1,Task,Shane transitions off business-unit work to product full-time; hand off to Sean/Joe,,E6,"Owner: Shane
+
+Shane told Con he must transition out of business-unit/business-systems work to focus on product (so far behind on what the team is doing). Hand the business-systems load to Sean and Joe (Crew Flex) where it overlaps. Capacity risk: Shane is co-owning the hardest deliverable AND running the stand-up during the same window.",mtg629 logistics capacity owner-shane day-1,Shane,To Do,2026-06-30
+T-L2,Task,Stand up the daily stand-up cadence (Shane / Rob / Dave; no weekend),,E6,"Owner: Shane
+
+Shane committed: 'if it's going to be 10 days, we need a daily stand-up.' Fixed 15-30 min slot, recurring on all working days; Rob + Dave standing attendees, Sully on the Core line. NO stand-up Sat 7/4 or Sun 7/5. Each stand-up forces one named decision and produces one artifact.",mtg629 logistics cadence owner-shane day-1,Shane,To Do,2026-06-30
+T-L3,Task,Schedule + hold the seat-data working meeting (Sully's team + Julian; exclude Sharon),,E6,"Owner: Sully
+
+Shane: 'try to put something on the calendar for tomorrow.' Attendees: Sully's boys + Julian + whoever Sully designates. Deliberately exclude Sharon near-term; have Julian cover his number. Also pull in Brian Dylan and Brian Doe (IT); note the data-person gap (want stronger than Muhammad Ali). Output feeds T-C3/T-C4.",mtg629 logistics seats owner-sully day-2,Sully,To Do,2026-07-01
+T-L4,Task,Schedule the reconvene for 7/7-7/8 (before Dave's 7/9 travel),,E6,"Owner: Dave
+
+Dave puts the reconvene on the calendar for 7 or 8 July (Tom: 'Perfect'). Hard constraint: Dave travels starting 7/9, so the reconvene must land 7/7 (primary) or 7/8 (slip), then 'end of next week' only as last resort. Near-zero back-end slack.",mtg629 logistics scheduling owner-dave day-1,Dave,To Do,2026-06-30
+T-L5,Task,Schedule in-person site visit to assess assault-team skill sets,,E6,"Owner: Con / Rob
+
+Con/Rob + Dave + Shane + Brad + Jake in person to assess whether the assault teams have the right skill sets (and the possible HMT competency gap). Give it a concrete proposed date and a confirming owner, scheduled around Dave's 7/9 travel, rather than leaving it as 'near term.'",mtg629 logistics site-visit owner-con-rob day-8,Con / Rob,To Do,2026-07-07
+T-L6,Task,10-Day Sprint Schedule (day-by-day go/no-go gates),,E6,"Owner: Shane
+
+Parent for the day-by-day sub-tasks. Gates: GATE 1 (Day 3) seat number locked or documented assumption; GATE 2 (Day 7) cost model frozen + judicious-cut pass; GATE 3 (Day 8) dry-run passed. Reconvene Day 8/9; execute Day 10.",mtg629 logistics schedule owner-shane day-10,Shane,To Do,2026-07-09
+H1,Task,Complete first three interview rounds,,E7,"Owner: Shane
+
+Three interview rounds conducted across the candidate pool. Complete.",mtg629 hiring interviews owner-shane,Shane,Done,
+H2,Task,Shortlist to 2 finalists,,E7,"Owner: Shane
+
+Field narrowed from the interviewed candidates to 2 finalists for the live working-interview round.",mtg629 hiring shortlist owner-shane,Shane,Done,
+H3,Task,Design the live working-interview exercise (build a quick AI product),,E7,"Owner: Shane
+
+Define the time-boxed live build: scope of the 'quick AI product' the finalist must build in front of the panel, the candidate brief, allowed tools (including Power BI), the expected deliverable, and the time limit. Should exercise both AI build skill and Power BI dashboarding.",mtg629 hiring exercise-design owner-shane,Shane,In Progress,
+H4,Task,Create the fictitious dataset for the live session,,E7,"Owner: Shane
+
+Build realistic fictitious data for candidates to work against during the live session so no real or sensitive data is exposed. Currently in progress.",mtg629 hiring fictitious-data owner-shane,Shane,In Progress,
+H5,Task,Define the panel scorecard / evaluation rubric,,E7,"Owner: Shane
+
+Common scoring rubric for the panel: AI product build quality, Power BI dashboarding, data handling, problem-solving under time pressure, communication, and role/culture fit. Weight the criteria and set the score scale so both finalists are judged consistently.",mtg629 hiring rubric owner-shane,Shane,To Do,
+H6,Task,Schedule the live session and confirm the interview panel,,E7,"Owner: Shane
+
+Lock the date/time for each finalist's live session, confirm panel members and availability, and share the rubric plus logistics (environment, screen-share, dataset access) with the panel ahead of time.",mtg629 hiring scheduling owner-shane,Shane,To Do,
+H7,Task,Run the live working-interview with both finalists,,E7,"Owner: Panel
+
+Each finalist builds the quick AI product live in front of the panel against the prepared fictitious dataset within the time box. Panel observes and scores against the rubric.",mtg629 hiring live-session owner-panel,Panel,To Do,
+H8,Task,Panel debrief and consolidate scores,,E7,"Owner: Shane
+
+Immediately after the sessions, gather panel scores and notes, consolidate against the rubric, and identify the leading finalist.",mtg629 hiring debrief owner-shane,Shane,To Do,
+H9,Task,Reference checks on the leading finalist,,E7,"Owner: Shane
+
+Conduct reference checks on the preferred finalist before extending an offer.",mtg629 hiring references owner-shane,Shane,To Do,
+H10,Task,Final decision and extend offer,,E7,"Owner: Shane
+
+Make the hire decision and extend the offer for the AI Lead & Power BI Developer role.",mtg629 hiring offer owner-shane,Shane,To Do,
+D1,Sub-task,"Day 1 (Tue 6/30): Kickoff - cadence locked, Shane to product, every unknown owned",,T-L6,"Owner: Shane
+
+Stand-up cadence on calendars (no weekend); Day-2 seat-data meeting booked (Julian in / Sharon out); every cost-model input has a named owner and is pinged; deliverable skeleton drafted; mission leads own the strategy/pursuits/shaping debate; Con/Rob own the deck. EXIT: all of the above true.",mtg629 day owner-shane day-1,Shane,To Do,2026-06-30
+D2,Sub-task,"Day 2 (Wed 7/1): GATE A - extract headcount inputs, frame Core architecture",,T-L6,"Owner: Shane
+
+Hold seat-data meeting (roll up dev counts, methodology, plus-up parked); Rob confirms price-model harness + tiers; Sully drafts Core layer + baseline question; mission leads open NUS/CAMEL/Layered-Defense work. EXIT: every cost-model input has a named owner + hard deadline; draft Core+baseline definition exists; unowned inputs escalated today (not over the weekend).",mtg629 day gate owner-shane day-2,Shane,To Do,2026-07-01
+D3,Sub-task,Day 3 (Thu 7/2): GATE 1 - seat number locked; deck baseline pulled; NVIDIA ordered,,T-L6,"Owner: Shane
+
+Julian delivers SAG headcount (or firm time); finalize rolled-up seat number + plus-up (FALLBACK: documented assumption, escalate to Con); lock licensing tiers + enterprise floor; Con/Rob pull deck baseline; order NVIDIA chips; mission leads produce draft must-win lists with NAMED capture managers + first-cut asks. EXIT: GATE 1 GO.",mtg629 day gate owner-shane day-3,Shane,To Do,2026-07-02
+D4,Sub-task,"Day 4 (Fri 7/3): GATE B/C - kill the architecture fork, build COAs, first cost numbers before the holiday",,T-L6,"Owner: Shane
+
+Lock baseline decision; build >=2 costed COAs with phased 3/6/9-mo projection; Rob runs price models; lock staffing model (Core infra + SEG mission-app teams); characterize software-to-hardware construct; finalize plus-up. EXIT: baseline LOCKED, two costed COAs drafted, first end-to-end numbers, every externally-owned number in hand (nothing retrievable over the 7/4-7/5 holiday).",mtg629 day gate owner-shane day-4,Shane,To Do,2026-07-03
+D5,Sub-task,Day 5 (Sat 7/4): Independence Day - DARK (async only),,T-L6,"Owner: Shane
+
+No stand-up. US Independence Day, treat as non-working. Optional async drop of late data points. Shane posts a short async check-in summarizing what is in hand + the single weekend synthesis task. EXIT: no deliverable; async status posted.",mtg629 day dark owner-shane day-5,Shane,To Do,2026-07-04
+D6,Sub-task,"Day 6 (Sun 7/5): Weekend solo synthesis (async, no stand-up)",,T-L6,"Owner: Shane
+
+Shane assembles the Core deliverable draft: final seat number + plus-up into both COAs, Rob's cost figures attached, baseline-decision rationale + staffing/value-for-money narrative. Produce a first full cost figure per COA. Post the draft Sunday evening for Monday review. EXIT: draft Core deliverable with two costed COAs posted.",mtg629 day dark owner-shane day-6,Shane,To Do,2026-07-05
+D7,Sub-task,"Day 7 (Mon 7/6): GATE 2 - reconverge, freeze the cost model, judicious-cut pass",,T-L6,"Owner: Shane
+
+Freeze the Core cost model (2 COAs costed, baseline decided, tiers + plus-up locked, single rolled-up figure, discount threshold marked); run the judicious-cut/prioritization pass vs the $85M caution; MVP workstream identifies viable MVPs/cost/staffing for EOY-2026; Con/Rob assemble the integrated deck; mission leads deliver near-final must-wins with named capture managers. EXIT: GATE 2 GO.",mtg629 day gate owner-shane day-7,Shane,To Do,2026-07-06
+D8,Sub-task,Day 8 (Tue 7/7): Final assembly + GATE 3 dry-run (primary reconvene window opens),,T-L6,"Owner: Shane
+
+Assemble both deliverables (Core buildout + cost model; locked strategy/pursuits/shaping); GATE 3 dry-run to Tom/Eric/Con; pressure-test the ask vs the cut-line; Berger reviews for cross-mission trimming. If dry-run clean, hold the reconvene today; else fix overnight and hold 7/8. EXIT: both deliverables assembled, dry-run passed (or gaps captured), reconvene confirmed for 7/7 or 7/8.",mtg629 day gate owner-shane day-8,Shane,To Do,2026-07-07
+D9,Sub-task,Day 9 (Wed 7/8): RECONVENE - it becomes the plan,,T-L6,"Owner: Shane
+
+Hold the reconvene before Dave's 7/9 travel. Mission leads present locked strategy with named capture managers; Shane+Sully present Core buildout + costed model with prioritized ask and explicit cut-line choices; Con/Rob present integrated brief; Tom/Berger adjudicate across the 6 missions; confirm MVP-by-EOY tied to the raise. Capture all decisions in writing. EXIT: the plan is locked.",mtg629 day milestone owner-shane day-9,Shane,To Do,2026-07-08
+D10,Sub-task,Day 10 (Thu 7/9): Execute the locked plan; protect Dave's travel; log open decisions,,T-L6,"Owner: Shane
+
+Dave departs (no plan-locking dependency on him); Sully begins standing up the Core cloud instance + seat provisioning; begin forming dedicated SEG mission-app dev teams; start NVIDIA experimentation; advance the site visit; log still-open decisions with owners + dates (plus-up %, 2-vs-3 baselines, stronger data person, Sharon timing, technical definition of Core, HMT acquire-vs-build); confirm raise checkpoints. EXIT: execution started against the locked, funded plan.",mtg629 day execution owner-shane day-10,Shane,To Do,2026-07-09
+HD1,Sub-task,Design the fictitious business scenario + dataset schema,,H4,"Owner: Shane
+
+Define a believable business scenario and the table/column schema the candidates will analyze and build against.",mtg629 fictitious-data design owner-shane,Shane,In Progress,
+HD2,Sub-task,Generate the fictitious dataset at realistic volume,,H4,"Owner: Shane
+
+Produce the data (CSV/SQL) with enough rows and realistic distributions to make the build meaningful and Power BI dashboards non-trivial.",mtg629 fictitious-data generate owner-shane,Shane,To Do,
+HD3,Sub-task,Inject data-quality issues + define the question set,,H4,"Owner: Shane
+
+Add a few realistic data-quality wrinkles (missing values, duplicates, inconsistent formats) and write the business questions / KPIs the candidate's AI product and dashboard should answer.",mtg629 fictitious-data questions owner-shane,Shane,To Do,
+HS1,Sub-task,Finalist 1 live build session,,H7,"Owner: Panel
+
+Finalist 1 builds the quick AI product live; panel scores against the rubric.",mtg629 live-session finalist-1 owner-panel,Panel,To Do,
+HS2,Sub-task,Finalist 2 live build session,,H7,"Owner: Panel
+
+Finalist 2 builds the quick AI product live; panel scores against the rubric.",mtg629 live-session finalist-2 owner-panel,Panel,To Do,
